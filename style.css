@@ -1,0 +1,31 @@
+body {
+  background-color: rgb(204, 166, 42);
+}
+h1 {
+  text-align: center;
+}
+h2 {
+  text-align: center;
+}
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 40px;
+}
+.top-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.middle-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bottom-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
