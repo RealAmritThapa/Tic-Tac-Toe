@@ -12,9 +12,12 @@ const top_left = document
       if (hot.key === "x") {
         top_arr[0].push("x");
         top_left.style.backgroundColor = "#44a6c6";
+        check_winnerx();
       } else if (hot.key === "o") {
-        top_arr[0] === "o";
+        top_arr[0].push("o");
+
         top_left.style.backgroundColor = "#6bd284";
+        check_winnnero();
       }
     });
   });
@@ -27,9 +30,11 @@ const top_middle = document
       if (hot.key === "x") {
         top_arr[1].push("x");
         top_middle.style.backgroundColor = "#44a6c6";
+        check_winnerx();
       } else if (hot.key === "o") {
-        top_arr[1] === "o";
+        top_arr[1].push("o");
         top_middle.style.backgroundColor = "#6bd284";
+        check_winnnero();
       }
     });
   });
@@ -42,9 +47,11 @@ const top_right = document
       if (hot.key === "x") {
         top_arr[2].push("x");
         top_right.style.backgroundColor = "#44a6c6";
+        check_winnerx();
       } else if (hot.key === "o") {
-        top_arr[2] === "o";
+        top_arr[2].push("o");
         top_right.style.backgroundColor = "#6bd284";
+        check_winnnero();
       }
     });
   });
@@ -59,9 +66,11 @@ const middle_left = document
         if (hot.key === "x") {
           mid_arr[0].push("x");
           middle_left.style.backgroundColor = "#44a6c6";
+          check_winnerx();
         } else if (hot.key === "o") {
-          mid_arr[0] === "o";
+          mid_arr[0].push("o");
           middle_left.style.backgroundColor = "#6bd284";
+          check_winnnero();
         }
       });
   });
@@ -76,9 +85,11 @@ const middle_middle = document
         if (hot.key === "x") {
           mid_arr[1].push("x");
           middle_middle.style.backgroundColor = "#44a6c6";
+          check_winnerx();
         } else if (hot.key === "o") {
-          mid_arr[1] === "o";
+          mid_arr[1].push("o");
           middle_middle.style.backgroundColor = "#6bd284";
+          check_winnnero();
         }
       });
   });
@@ -93,9 +104,11 @@ const middle_right = document
         if (hot.key === "x") {
           mid_arr[2].push("x");
           middle_right.style.backgroundColor = "#44a6c6";
+          check_winnerx();
         } else if (hot.key === "o") {
-          mid_arr[2] === "o";
+          mid_arr[2].push("o");
           middle_right.style.backgroundColor = "#6bd284";
+          check_winnnero();
         }
       });
   });
@@ -110,9 +123,11 @@ const bottom_left = document
         if (hot.key === "x") {
           bot_arr[0].push("x");
           bottom_left.style.backgroundColor = "#44a6c6";
+          check_winnerx();
         } else if (hot.key === "o") {
-          bot_arr[0] === "o";
+          bot_arr[0].push("o");
           bottom_left.style.backgroundColor = "#6bd284";
+          check_winnnero();
         }
       });
   });
@@ -127,9 +142,11 @@ const bottom_middle = document
         if (hot.key === "x") {
           bot_arr[1].push("x");
           bottom_middle.style.backgroundColor = "#44a6c6";
+          check_winnerx();
         } else if (hot.key === "o") {
-          bot_arr[1] === "o";
+          bot_arr[1]("o");
           bottom_middle.style.backgroundColor = "#6bd284";
+          check_winnnero();
         }
       });
   });
@@ -144,71 +161,65 @@ const bottom_right = document
         if (hot.key === "x") {
           bot_arr[2].push("x");
           bottom_right.style.backgroundColor = "#44a6c6";
+          check_winnerx();
         } else if (hot.key === "o") {
-          bot_arr[2] === "o";
+          bot_arr[2].push("o");
           bottom_right.style.backgroundColor = "#6bd284";
+          check_winnnero();
         }
       });
   });
 
-const player1 = document
-  .querySelector(".box")
-  .addEventListener("keydown", (e) => {
-    if (e.key === "Enter") {
-      if (top_arr[0] == "x" && top_arr[1] == "x" && top_arr[2] == "x") {
-        winner.textContent = "Player 1 Won";
-      }
-      if (mid_arr[0] == "x" && mid_arr[1] == "x" && mid_arr[2] == "x") {
-        winner.textContent = "Player 1 Won";
-      }
-      if (bot_arr[0] == "x" && bot_arr[1] == "x" && bot_arr[2] == "x") {
-        winner.textContent = "Player 1 Won";
-      }
-      if (top_arr[0] == "x" && mid_arr[0] == "x" && bot_arr[0] == "x") {
-        winner.textContent = "Player 1 Won";
-      }
-      if (top_arr[1] == "x" && mid_arr[1] == "x" && bot_arr[1] == "x") {
-        winner.textContent = "Player 1 Won";
-      }
-      if (top_arr[2] == "x" && mid_arr[2] == "x" && bot_arr[2] == "x") {
-        winner.textContent = "Player 1 Won";
-      }
-      if (top_arr[0] == "x" && mid_arr[1] == "x" && bot_arr[2] == "x") {
-        winner.textContent = "Player 1 Won";
-      }
-      if (top_arr[2] == "x" && mid_arr[1] == "x" && bot_arr[0] == "x") {
-        winner.textContent = "Player 1 Won";
-      }
-    }
-  });
+function check_winnerx() {
+  if (top_arr[0] == "x" && top_arr[1] == "x" && top_arr[2] == "x") {
+    winner.textContent = "Player 1 Won";
+  }
+  if (mid_arr[0] == "x" && mid_arr[1] == "x" && mid_arr[2] == "x") {
+    winner.textContent = "Player 1 Won";
+  }
+  if (bot_arr[0] == "x" && bot_arr[1] == "x" && bot_arr[2] == "x") {
+    winner.textContent = "Player 1 Won";
+  }
+  if (top_arr[0] == "x" && mid_arr[0] == "x" && bot_arr[0] == "x") {
+    winner.textContent = "Player 1 Won";
+  }
+  if (top_arr[1] == "x" && mid_arr[1] == "x" && bot_arr[1] == "x") {
+    winner.textContent = "Player 1 Won";
+  }
+  if (top_arr[2] == "x" && mid_arr[2] == "x" && bot_arr[2] == "x") {
+    winner.textContent = "Player 1 Won";
+  }
+  if (top_arr[0] == "x" && mid_arr[1] == "x" && bot_arr[2] == "x") {
+    winner.textContent = "Player 1 Won";
+  }
+  if (top_arr[2] == "x" && mid_arr[1] == "x" && bot_arr[0] == "x") {
+    winner.textContent = "Player 1 Won";
+  }
+}
 
-const player2 = document
-  .querySelector(".box")
-  .addEventListener("keydown", (e) => {
-    if (e.key === "Enter") {
-      if (top_arr[0] == "o" && top_arr[1] == "o" && top_arr[2] == "o") {
-        winner.textContent = "Player 2 Won";
-      }
-      if (mid_arr[0] == "o" && mid_arr[1] == "o" && mid_arr[2] == "o") {
-        winner.textContent = "Player 2 Won";
-      }
-      if (bot_arr[0] == "o" && bot_arr[1] == "o" && bot_arr[2] == "o") {
-        winner.textContent = "Player 2 Won";
-      }
-      if (top_arr[0] == "o" && mid_arr[0] == "o" && bot_arr[0] == "o") {
-        winner.textContent = "Player 2 Won";
-      }
-      if (top_arr[1] == "o" && mid_arr[1] == "o" && bot_arr[1] == "o") {
-        winner.textContent = "Player 2 Won";
-      }
-      if (top_arr[2] == "o" && mid_arr[2] == "o" && bot_arr[2] == "o") {
-        winner.textContent = "Player 2 Won";
-      }
-      if (top_arr[0] == "o" && mid_arr[1] == "o" && bot_arr[2] == "o") {
-        winner.textContent = "Player 2 Won";
-      }
-      if (top_arr[2] == "o" && mid_arr[1] == "o" && bot_arr[0] == "o") {
-        winner.textContent = "Player 2 Won";
-      }
-    }
-  });
+function check_winnnero() {
+  if (top_arr[0] == "o" && top_arr[1] == "o" && top_arr[2] == "o") {
+    winner.textContent = "Player 2 Won";
+  }
+  if (mid_arr[0] == "o" && mid_arr[1] == "o" && mid_arr[2] == "o") {
+    winner.textContent = "Player 2 Won";
+  }
+  if (bot_arr[0] == "o" && bot_arr[1] == "o" && bot_arr[2] == "o") {
+    winner.textContent = "Player 2 Won";
+  }
+  if (top_arr[0] == "o" && mid_arr[0] == "o" && bot_arr[0] == "o") {
+    winner.textContent = "Player 2 Won";
+  }
+  if (top_arr[1] == "o" && mid_arr[1] == "o" && bot_arr[1] == "o") {
+    winner.textContent = "Player 2 Won";
+  }
+  if (top_arr[2] == "o" && mid_arr[2] == "o" && bot_arr[2] == "o") {
+    winner.textContent = "Player 2 Won";
+  }
+  if (top_arr[0] == "o" && mid_arr[1] == "o" && bot_arr[2] == "o") {
+    winner.textContent = "Player 2 Won";
+  }
+  if (top_arr[2] == "o" && mid_arr[1] == "o" && bot_arr[0] == "o") {
+    winner.textContent = "Player 2 Won";
+  }
+}
