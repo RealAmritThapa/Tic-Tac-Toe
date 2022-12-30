@@ -11,12 +11,12 @@ const top_left = document
       let top_left = document.getElementById("top-left");
       if (hot.key === "x") {
         top_arr[0].push("x");
-        top_left.style.backgroundColor = "#44a6c6";
+        top_left.style.backgroundColor = "#C0DEFF";
         check_winnerx();
       } else if (hot.key === "o") {
         top_arr[0].push("o");
 
-        top_left.style.backgroundColor = "#6bd284";
+        top_left.style.backgroundColor = "#FFF8E1";
         check_winnnero();
       }
     });
@@ -29,11 +29,11 @@ const top_middle = document
       let top_middle = document.getElementById("top-middle");
       if (hot.key === "x") {
         top_arr[1].push("x");
-        top_middle.style.backgroundColor = "#44a6c6";
+        top_middle.style.backgroundColor = "#C0DEFF";
         check_winnerx();
       } else if (hot.key === "o") {
         top_arr[1].push("o");
-        top_middle.style.backgroundColor = "#6bd284";
+        top_middle.style.backgroundColor = "#FFF8E1";
         check_winnnero();
       }
     });
@@ -46,11 +46,11 @@ const top_right = document
       let top_right = document.getElementById("top-right");
       if (hot.key === "x") {
         top_arr[2].push("x");
-        top_right.style.backgroundColor = "#44a6c6";
+        top_right.style.backgroundColor = "#C0DEFF";
         check_winnerx();
       } else if (hot.key === "o") {
         top_arr[2].push("o");
-        top_right.style.backgroundColor = "#6bd284";
+        top_right.style.backgroundColor = "#FFF8E1";
         check_winnnero();
       }
     });
@@ -65,11 +65,11 @@ const middle_left = document
         let middle_left = document.getElementById("middle-left");
         if (hot.key === "x") {
           mid_arr[0].push("x");
-          middle_left.style.backgroundColor = "#44a6c6";
+          middle_left.style.backgroundColor = "#C0DEFF";
           check_winnerx();
         } else if (hot.key === "o") {
           mid_arr[0].push("o");
-          middle_left.style.backgroundColor = "#6bd284";
+          middle_left.style.backgroundColor = "#FFF8E1";
           check_winnnero();
         }
       });
@@ -84,11 +84,11 @@ const middle_middle = document
         let middle_middle = document.getElementById("middle-middle");
         if (hot.key === "x") {
           mid_arr[1].push("x");
-          middle_middle.style.backgroundColor = "#44a6c6";
+          middle_middle.style.backgroundColor = "#C0DEFF";
           check_winnerx();
         } else if (hot.key === "o") {
           mid_arr[1].push("o");
-          middle_middle.style.backgroundColor = "#6bd284";
+          middle_middle.style.backgroundColor = "#FFF8E1";
           check_winnnero();
         }
       });
@@ -103,11 +103,11 @@ const middle_right = document
         let middle_right = document.getElementById("middle-right");
         if (hot.key === "x") {
           mid_arr[2].push("x");
-          middle_right.style.backgroundColor = "#44a6c6";
+          middle_right.style.backgroundColor = "#C0DEFF";
           check_winnerx();
         } else if (hot.key === "o") {
           mid_arr[2].push("o");
-          middle_right.style.backgroundColor = "#6bd284";
+          middle_right.style.backgroundColor = "#FFF8E1";
           check_winnnero();
         }
       });
@@ -122,11 +122,11 @@ const bottom_left = document
         let bottom_left = document.getElementById("bottom-left");
         if (hot.key === "x") {
           bot_arr[0].push("x");
-          bottom_left.style.backgroundColor = "#44a6c6";
+          bottom_left.style.backgroundColor = "#C0DEFF";
           check_winnerx();
         } else if (hot.key === "o") {
           bot_arr[0].push("o");
-          bottom_left.style.backgroundColor = "#6bd284";
+          bottom_left.style.backgroundColor = "#FFF8E1";
           check_winnnero();
         }
       });
@@ -141,11 +141,11 @@ const bottom_middle = document
         let bottom_middle = document.getElementById("bottom-middle");
         if (hot.key === "x") {
           bot_arr[1].push("x");
-          bottom_middle.style.backgroundColor = "#44a6c6";
+          bottom_middle.style.backgroundColor = "#C0DEFF";
           check_winnerx();
         } else if (hot.key === "o") {
           bot_arr[1]("o");
-          bottom_middle.style.backgroundColor = "#6bd284";
+          bottom_middle.style.backgroundColor = "#FFF8E1";
           check_winnnero();
         }
       });
@@ -160,11 +160,11 @@ const bottom_right = document
         let bottom_right = document.getElementById("bottom-right");
         if (hot.key === "x") {
           bot_arr[2].push("x");
-          bottom_right.style.backgroundColor = "#44a6c6";
+          bottom_right.style.backgroundColor = "#C0DEFF";
           check_winnerx();
         } else if (hot.key === "o") {
           bot_arr[2].push("o");
-          bottom_right.style.backgroundColor = "#6bd284";
+          bottom_right.style.backgroundColor = "#FFF8E1";
           check_winnnero();
         }
       });
