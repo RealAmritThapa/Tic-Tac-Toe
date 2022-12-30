@@ -3,6 +3,19 @@ let top_arr = [[], [], []];
 let mid_arr = [[], [], []];
 let bot_arr = [[], [], []];
 let winner = document.querySelector("h2");
+const start = document.querySelector(".click").addEventListener("click", () => {
+  let rand_num = Math.round(Math.random());
+  console.log(rand_num);
+  if (rand_num == 0) {
+    document.querySelector(".click").textContent = "X";
+    document.getElementById("click").style.fontSize = "250%";
+    document.getElementById("click").style.backgroundColor = "#C0DEFF";
+  } else {
+    document.querySelector(".click").textContent = "O";
+    document.getElementById("click").style.fontSize = "250%";
+    document.getElementById("click").style.backgroundColor = "#FFF8E1";
+  }
+});
 
 const top_left = document
   .querySelector(".top-left")
@@ -12,6 +25,7 @@ const top_left = document
       if (hot.key === "x") {
         top_arr[0].push("x");
         top_left.style.backgroundColor = "#C0DEFF";
+
         check_winnerx();
       } else if (hot.key === "o") {
         top_arr[0].push("o");

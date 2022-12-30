@@ -15,7 +15,7 @@ h2 {
   text-align: center;
   margin-bottom: 7%;
 }
-button {
+.reset {
   background-color: #ff8e9e;
   border-radius: 50%;
   border: none;
@@ -28,8 +28,22 @@ button {
   padding: 50px 50px;
   box-shadow: 0 9px #999;
 }
+.click {
+  background-color: #ff8e9e;
+  border-radius: 50%;
+  border: none;
+  font-size: 30px;
+  text-align: center;
+  cursor: pointer;
+  margin: 4px 2px;
+  position: absolute;
+  left: 6%;
+  padding: 50px 50px;
+  box-shadow: 0 9px #999;
+}
 
-button:active {
+.reset,
+.click:active {
   background-color: #ff597b;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
