@@ -10,52 +10,53 @@
   <body>
     <h1>Tic-Tac-Toe</h1>
     <h2></h2>
-    <div class="container">
-      <div class="click-button">
-        <button class="click" type="button" id="click">
-          click me <br />
-          to start
-        </button>
-      </div>
+    <div class="background" id="background">
+      <div class="container">
+        <div class="click-button">
+          <button class="click" type="button" id="click">
+            click me <br />
+            to start
+          </button>
+        </div>
+        <div class="table">
+          <form class="box">
+            <div class="top-row">
+              <input class="top-left" id="top-left" />
+              <input class="top-middle" id="top-middle" />
+              <input class="top-right" id="top-right" />
+            </div>
+            <div class="middle-row">
+              <input class="middle-left" id="middle-left" />
+              <input class="middle-middle" id="middle-middle" />
+              <input class="middle-right" id="middle-right" />
+            </div>
 
-      <div class="table">
-        <form class="box">
-          <div class="top-row">
-            <input class="top-left" id="top-left" />
-            <input class="top-middle" id="top-middle" />
-            <input class="top-right" id="top-right" />
-          </div>
-          <div class="middle-row">
-            <input class="middle-left" id="middle-left" />
-            <input class="middle-middle" id="middle-middle" />
-            <input class="middle-right" id="middle-right" />
-          </div>
+            <div class="bottom-row">
+              <input class="bottom-left" id="bottom-left" />
+              <input class="bottom-middle" id="bottom-middle" />
+              <input class="bottom-right" id="bottom-right" />
+            </div>
+          </form>
+        </div>
+        <div class="reset-button">
+          <button type="submit" class="reset">Reset</button>
+        </div>
+      </div>
+    </div>
 
-          <div class="bottom-row">
-            <input class="bottom-left" id="bottom-left" />
-            <input class="bottom-middle" id="bottom-middle" />
-            <input class="bottom-right" id="bottom-right" />
-          </div>
-        </form>
-      </div>
-      <div class="reset-button">
-        <button type="submit" class="reset">Reset</button>
-      </div>
-      <div class="background"> 
-    <div class="info">
+    <div class="info" id="info">
       <div class="dec">
         <div class="player-1">
           <label class="name1">Player 1 Name: </label>
-          <input class="name" />
+          <input class="player1-name" type="text" />
         </div>
         <div class="player-2">
           <label class="name2">Player 2 Name: </label>
-          <input class="name" />
+          <input class="player2-name" type="text" />
         </div>
       </div>
+      <button class="submit" type="button">Submit</button>
     </div>
-    </div>
-
   </body>
   <script src="main.js"></script>
 </html>

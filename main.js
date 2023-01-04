@@ -2,6 +2,8 @@
 let top_arr = [[], [], []];
 let mid_arr = [[], [], []];
 let bot_arr = [[], [], []];
+let player_1;
+let player_2;
 let winner = document.querySelector("h2");
 const start = document.querySelector(".click").addEventListener("click", () => {
   let rand_num = Math.round(Math.random());
@@ -182,6 +184,16 @@ const bottom_right = document
           check_winnnero();
         }
       });
+  });
+
+const submit = document
+  .querySelector(".submit")
+  .addEventListener("click", () => {
+    player_1 = document.querySelector(".player1-name").value;
+    player_2 = document.querySelector(".player2-name").value;
+    document.getElementById("info").style.display = "none";
+    document.getElementById("background").style.filter = "none";
+    console.log(player_1, player_2);
   });
 
 function check_winnerx() {
