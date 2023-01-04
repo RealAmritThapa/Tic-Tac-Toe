@@ -237,3 +237,7 @@ function check_winnnero() {
     winner.textContent = "Player 2 Won";
   }
 }
+
+document.querySelector(".reset").addEventListener("click", () => {
+  console.log("hello");
+});

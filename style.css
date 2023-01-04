@@ -5,6 +5,7 @@ body {
 }
 h1 {
   text-align: center;
+  align-self: center;
   font-size: 60px;
   border-bottom: 5px solid black;
   max-width: 100%;
@@ -22,9 +23,6 @@ h2 {
   font-size: 30px;
   text-align: center;
   cursor: pointer;
-  margin: 4px 2px;
-  position: absolute;
-  right: 10%;
   padding: 50px 50px;
   box-shadow: 0 9px #999;
 }
@@ -35,19 +33,22 @@ h2 {
   font-size: 30px;
   text-align: center;
   cursor: pointer;
-  margin: 4px 2px;
-  position: absolute;
-  left: 6%;
   padding: 50px 50px;
   box-shadow: 0 9px #999;
 }
 
-.reset,
+.reset:active {
+  background-color: #ff597b;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
 .click:active {
   background-color: #ff597b;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+
 input {
   font-size: 400%;
   text-align: center;
@@ -57,22 +58,19 @@ input {
 }
 .box {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  margin: 10px;
 }
 .top-row {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 2%;
+  margin-bottom: 10%;
 }
 .middle-row {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 2%;
+  margin-bottom: 10%;
 }
 .bottom-row {
   display: flex;
@@ -104,4 +102,51 @@ input {
   width: 50px;
   height: 50px;
   border: 2px solid black;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.info {
+  display: flex;
+  border: 5px solid black;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  width: 40%;
+  height: 50%;
+  background-color: #ff597b;
+}
+
+.name {
+  width: 50%;
+  text-align: left;
+  height: 15px;
+  font-size: large;
+}
+.player-1,
+.player-2 {
+  display: flex;
+  width: 90%;
+  margin-top: 7%;
+  justify-content: center;
+}
+
+.name2,
+.name1 {
+  align-self: center;
+}
+.dec {
+  background-color: rgb(111, 210, 210);
+  width: 90%;
+  height: 90%;
+}
+
+.background {
 }
