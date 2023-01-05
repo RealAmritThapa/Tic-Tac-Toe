@@ -196,60 +196,93 @@ const submit = document
     console.log(player_1, player_2);
   });
 
+const reset = document.querySelector(".reset").addEventListener("click", () => {
+  document.getElementById("info").style.display = "flex";
+  document.getElementById("background").style.filter = "blur(5px)";
+  document.querySelector(".player1-name").value = "";
+  document.querySelector(".player2-name").value = "";
+  console.log(top_arr);
+
+  document.getElementById("top-left").value = "";
+  document.getElementById("top-middle").value = "";
+  document.getElementById("top-right").value = "";
+
+  document.getElementById("middle-left").value = "";
+  document.getElementById("middle-middle").value = "";
+  document.getElementById("middle-right").value = "";
+
+  document.getElementById("bottom-left").value = "";
+  document.getElementById("bottom-middle").value = "";
+  document.getElementById("bottom-right").value = "";
+
+  document.getElementById("top-left").style.backgroundColor = "";
+  document.getElementById("top-middle").style.backgroundColor = "";
+  document.getElementById("top-right").style.backgroundColor = "";
+
+  document.getElementById("middle-left").style.backgroundColor = "";
+  document.getElementById("middle-middle").style.backgroundColor = "";
+  document.getElementById("middle-right").style.backgroundColor = "";
+
+  document.getElementById("bottom-left").style.backgroundColor = "";
+  document.getElementById("bottom-middle").style.backgroundColor = "";
+  document.getElementById("bottom-right").style.backgroundColor = "";
+
+  winner.textContent = "";
+  for (let i = 0; i < 3; ++i) {
+    top_arr[i] = [];
+  }
+});
+
 function check_winnerx() {
   if (top_arr[0] == "x" && top_arr[1] == "x" && top_arr[2] == "x") {
-    winner.textContent = "Player 1 Won";
+    winner.textContent = player_1 + " won";
   }
   if (mid_arr[0] == "x" && mid_arr[1] == "x" && mid_arr[2] == "x") {
-    winner.textContent = "Player 1 Won";
+    winner.textContent = player_1 + " won";
   }
   if (bot_arr[0] == "x" && bot_arr[1] == "x" && bot_arr[2] == "x") {
-    winner.textContent = "Player 1 Won";
+    winner.textContent = player_1 + " won";
   }
   if (top_arr[0] == "x" && mid_arr[0] == "x" && bot_arr[0] == "x") {
-    winner.textContent = "Player 1 Won";
+    winner.textContent = player_1 + " won";
   }
   if (top_arr[1] == "x" && mid_arr[1] == "x" && bot_arr[1] == "x") {
-    winner.textContent = "Player 1 Won";
+    winner.textContent = player_1 + " won";
   }
   if (top_arr[2] == "x" && mid_arr[2] == "x" && bot_arr[2] == "x") {
-    winner.textContent = "Player 1 Won";
+    winner.textContent = player_1 + " won";
   }
   if (top_arr[0] == "x" && mid_arr[1] == "x" && bot_arr[2] == "x") {
-    winner.textContent = "Player 1 Won";
+    winner.textContent = player_1 + " won";
   }
   if (top_arr[2] == "x" && mid_arr[1] == "x" && bot_arr[0] == "x") {
-    winner.textContent = "Player 1 Won";
+    winner.textContent = player_1 + " won";
   }
 }
 
 function check_winnnero() {
   if (top_arr[0] == "o" && top_arr[1] == "o" && top_arr[2] == "o") {
-    winner.textContent = "Player 2 Won";
+    winner.textContent = player_2 + " Won";
   }
   if (mid_arr[0] == "o" && mid_arr[1] == "o" && mid_arr[2] == "o") {
-    winner.textContent = "Player 2 Won";
+    winner.textContent = player_2 + " Won";
   }
   if (bot_arr[0] == "o" && bot_arr[1] == "o" && bot_arr[2] == "o") {
-    winner.textContent = "Player 2 Won";
+    winner.textContent = player_2 + " Won";
   }
   if (top_arr[0] == "o" && mid_arr[0] == "o" && bot_arr[0] == "o") {
-    winner.textContent = "Player 2 Won";
+    winner.textContent = player_2 + " Won";
   }
   if (top_arr[1] == "o" && mid_arr[1] == "o" && bot_arr[1] == "o") {
-    winner.textContent = "Player 2 Won";
+    winner.textContent = player_2 + " Won";
   }
   if (top_arr[2] == "o" && mid_arr[2] == "o" && bot_arr[2] == "o") {
-    winner.textContent = "Player 2 Won";
+    winner.textContent = player_2 + " Won";
   }
   if (top_arr[0] == "o" && mid_arr[1] == "o" && bot_arr[2] == "o") {
-    winner.textContent = "Player 2 Won";
+    winner.textContent = player_2 + " Won";
   }
   if (top_arr[2] == "o" && mid_arr[1] == "o" && bot_arr[0] == "o") {
-    winner.textContent = "Player 2 Won";
+    winner.textContent = player_2 + " Won";
   }
 }
-
-document.querySelector(".reset").addEventListener("click", () => {
-  console.log("hello");
-});
