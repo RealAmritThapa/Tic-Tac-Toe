@@ -144,6 +144,9 @@ input {
 .name2,
 .name1 {
   align-self: center;
+  padding: 5px;
+  font-size: larger;
+  width: 130px;
 }
 .dec {
   display: flex;

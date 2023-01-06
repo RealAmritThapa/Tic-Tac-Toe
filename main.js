@@ -7,7 +7,7 @@ let player_2;
 let winner = document.querySelector("h2");
 const start = document.querySelector(".click").addEventListener("click", () => {
   let rand_num = Math.round(Math.random());
-  console.log(rand_num);
+
   if (rand_num == 0) {
     document.querySelector(".click").textContent = "X";
     document.getElementById("click").style.fontSize = "250%";
@@ -25,13 +25,11 @@ const top_left = document
     document.querySelector(".top-left").addEventListener("keydown", (hot) => {
       let top_left = document.getElementById("top-left");
       if (hot.key === "x") {
-        top_arr[0].push("x");
+        top_arr[0] = "x";
         top_left.style.backgroundColor = "#C0DEFF";
-
         check_winnerx();
       } else if (hot.key === "o") {
-        top_arr[0].push("o");
-
+        top_arr[0] = "o";
         top_left.style.backgroundColor = "#FFF8E1";
         check_winnnero();
       }
@@ -44,11 +42,11 @@ const top_middle = document
     document.querySelector(".top-middle").addEventListener("keydown", (hot) => {
       let top_middle = document.getElementById("top-middle");
       if (hot.key === "x") {
-        top_arr[1].push("x");
+        top_arr[1] = "x";
         top_middle.style.backgroundColor = "#C0DEFF";
         check_winnerx();
       } else if (hot.key === "o") {
-        top_arr[1].push("o");
+        top_arr[1] = "o";
         top_middle.style.backgroundColor = "#FFF8E1";
         check_winnnero();
       }
@@ -61,11 +59,11 @@ const top_right = document
     document.querySelector(".top-right").addEventListener("keydown", (hot) => {
       let top_right = document.getElementById("top-right");
       if (hot.key === "x") {
-        top_arr[2].push("x");
+        top_arr[2] = "x";
         top_right.style.backgroundColor = "#C0DEFF";
         check_winnerx();
       } else if (hot.key === "o") {
-        top_arr[2].push("o");
+        top_arr[2] = "o";
         top_right.style.backgroundColor = "#FFF8E1";
         check_winnnero();
       }
@@ -80,11 +78,11 @@ const middle_left = document
       .addEventListener("keydown", (hot) => {
         let middle_left = document.getElementById("middle-left");
         if (hot.key === "x") {
-          mid_arr[0].push("x");
+          mid_arr[0] = "x";
           middle_left.style.backgroundColor = "#C0DEFF";
           check_winnerx();
         } else if (hot.key === "o") {
-          mid_arr[0].push("o");
+          mid_arr[0] = "o";
           middle_left.style.backgroundColor = "#FFF8E1";
           check_winnnero();
         }
@@ -99,11 +97,11 @@ const middle_middle = document
       .addEventListener("keydown", (hot) => {
         let middle_middle = document.getElementById("middle-middle");
         if (hot.key === "x") {
-          mid_arr[1].push("x");
+          mid_arr[1] = "x";
           middle_middle.style.backgroundColor = "#C0DEFF";
           check_winnerx();
         } else if (hot.key === "o") {
-          mid_arr[1].push("o");
+          mid_arr[1] = "o";
           middle_middle.style.backgroundColor = "#FFF8E1";
           check_winnnero();
         }
@@ -118,11 +116,11 @@ const middle_right = document
       .addEventListener("keydown", (hot) => {
         let middle_right = document.getElementById("middle-right");
         if (hot.key === "x") {
-          mid_arr[2].push("x");
+          mid_arr[2] = "x";
           middle_right.style.backgroundColor = "#C0DEFF";
           check_winnerx();
         } else if (hot.key === "o") {
-          mid_arr[2].push("o");
+          mid_arr[2] = "o";
           middle_right.style.backgroundColor = "#FFF8E1";
           check_winnnero();
         }
@@ -137,11 +135,11 @@ const bottom_left = document
       .addEventListener("keydown", (hot) => {
         let bottom_left = document.getElementById("bottom-left");
         if (hot.key === "x") {
-          bot_arr[0].push("x");
+          bot_arr[0] = "x";
           bottom_left.style.backgroundColor = "#C0DEFF";
           check_winnerx();
         } else if (hot.key === "o") {
-          bot_arr[0].push("o");
+          bot_arr[0] = "o";
           bottom_left.style.backgroundColor = "#FFF8E1";
           check_winnnero();
         }
@@ -156,11 +154,11 @@ const bottom_middle = document
       .addEventListener("keydown", (hot) => {
         let bottom_middle = document.getElementById("bottom-middle");
         if (hot.key === "x") {
-          bot_arr[1].push("x");
+          bot_arr[1] = "x";
           bottom_middle.style.backgroundColor = "#C0DEFF";
           check_winnerx();
         } else if (hot.key === "o") {
-          bot_arr[1]("o");
+          bot_arr[1] = "o";
           bottom_middle.style.backgroundColor = "#FFF8E1";
           check_winnnero();
         }
@@ -175,11 +173,11 @@ const bottom_right = document
       .addEventListener("keydown", (hot) => {
         let bottom_right = document.getElementById("bottom-right");
         if (hot.key === "x") {
-          bot_arr[2].push("x");
+          bot_arr[2] = "x";
           bottom_right.style.backgroundColor = "#C0DEFF";
           check_winnerx();
         } else if (hot.key === "o") {
-          bot_arr[2].push("o");
+          bot_arr[2] = "o";
           bottom_right.style.backgroundColor = "#FFF8E1";
           check_winnnero();
         }
@@ -201,7 +199,6 @@ const reset = document.querySelector(".reset").addEventListener("click", () => {
   document.getElementById("background").style.filter = "blur(5px)";
   document.querySelector(".player1-name").value = "";
   document.querySelector(".player2-name").value = "";
-  console.log(top_arr);
 
   document.getElementById("top-left").value = "";
   document.getElementById("top-middle").value = "";
@@ -230,6 +227,8 @@ const reset = document.querySelector(".reset").addEventListener("click", () => {
   winner.textContent = "";
   for (let i = 0; i < 3; ++i) {
     top_arr[i] = [];
+    mid_arr[i] = [];
+    bot_arr[i] = [];
   }
 });
 
